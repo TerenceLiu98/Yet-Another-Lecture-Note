@@ -1,0 +1,48 @@
+\documentclass[10pt, a4paper]{article}
+\usepackage{note}
+
+% title
+\title{MATH201: Title of You Lecture Note\footnote{footnote: ``This lecture note is XXXX"}}
+
+% author information
+
+\author{Author Name$^1$\thanks{ Considered of my limited ability, mistakes are inevitable. Correction and suggestions are welcomed. This work is under the CC-BY-SA 4.0 International license \faCreativeCommons\ \faCreativeCommonsBy\ \faCreativeCommonsSa.} \\ helloworld@example.com}
+\date{$^1$ Department of XXX, University of XXX \\ \vspace{0.1in} Date of Final Compile: \today}
+
+\makeindex
+
+% symbols & abbrav
+\glsxtrnewsymbol[description={closure of a set $A$}]{A}{\ensuremath{\overline{A}}}
+\glsxtrnewsymbol[description={interor of a set $A$}]{B}{\ensuremath{\mathring{A}}}
+
+
+\begin{document}
+
+\newgeometry{margin=1in} 
+\maketitle
+\tableofcontents
+\include{content/abstract}
+\clearpage
+\restoregeometry
+
+% list of symbols
+\printunsrtglossary[type=symbols,style=long]
+
+
+% part one: Introduction
+\include{content/part1}
+
+% chapter two: Saome examples to get started
+\include{content/part2}
+
+
+
+% reference
+
+\newgeometry{margin=0.5in}
+\bibliographystyle{abbrv}
+\bibliography{content/reference}
+\printindex
+\restoregeometry
+
+\end{document}
